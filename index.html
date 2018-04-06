@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <script src="js/tictactoe.js"></script>
+    <script src="js/match.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/game.js"></script>
+</head>
+
+<body onload="bodyOnLoad()">
+    <div class="align-center game">
+        <div>
+            <div class="players-selection">
+                <input type="radio" name="players-selection" class="with-gap" id="hvsc" checked="checked" />
+                <label for="hvsc">Human VS Computer</label>
+            </div>
+            <div class="board-selection">
+                <input type="radio" name="board-selection" class="with-gap" id="3x3" checked="checked" />
+                <label for="3x3">3 x 3</label>
+            </div>
+        </div>
+        <div>
+            <div class="players-selection">
+                <input type="radio" name="players-selection" class="with-gap" id="hvsh" />
+                <label for="hvsh">Human VS Human</label>
+            </div>
+            <div class="board-selection">
+                <input type="radio" name="board-selection" class="with-gap" id="4x4" />
+                <label for="4x4">4 x 4</label>
+            </div>
+        </div>
+        <div class="players-definition">
+            <div class="player-score card-panel">
+                <div class="player1-score-label"></div>
+                <div class="player-score-value">0</div>
+            </div>
+            <div class="player-score card-panel">
+                <div class="player2-score-label"></div>
+                <div class="player-score-value">0</div>
+            </div>
+        </div>
+
+        <div id="status" class="status">
+            <div class="refresh"></div>
+        </div>
+
+        <!-- BOARD 3x3 -->
+        <div id="board3x3" class="board">
+            <div class="board-row">
+                <div data-col="0" data-row="0" class="board-cell"></div>
+                <div data-col="1" data-row="0" class="board-cell"></div>
+                <div data-col="2" data-row="0" class="board-cell"></div>
+            </div>
+            <div class="board-row">
+                <div data-col="0" data-row="1" class="board-cell"></div>
+                <div data-col="1" data-row="1" class="board-cell"></div>
+                <div data-col="2" data-row="1" class="board-cell"></div>
+            </div>
+            <div class="board-row">
+                <div data-col="0" data-row="2" class="board-cell"></div>
+                <div data-col="1" data-row="2" class="board-cell"></div>
+                <div data-col="2" data-row="2" class="board-cell"></div>
+            </div>
+        </div>
+
+        <!-- BOARD 4x4 -->
+        <div id="board4x4" class="board hidden">
+            <div class="board-row">
+                <div data-col="0" data-row="0" class="board-cell"></div>
+                <div data-col="1" data-row="0" class="board-cell"></div>
+                <div data-col="2" data-row="0" class="board-cell"></div>
+                <div data-col="3" data-row="0" class="board-cell"></div>
+            </div>
+            <div class="board-row">
+                <div data-col="0" data-row="1" class="board-cell"></div>
+                <div data-col="1" data-row="1" class="board-cell"></div>
+                <div data-col="2" data-row="1" class="board-cell"></div>
+                <div data-col="3" data-row="1" class="board-cell"></div>
+            </div>
+            <div class="board-row">
+                <div data-col="0" data-row="2" class="board-cell"></div>
+                <div data-col="1" data-row="2" class="board-cell"></div>
+                <div data-col="2" data-row="2" class="board-cell"></div>
+                <div data-col="3" data-row="2" class="board-cell"></div>
+            </div>
+            <div class="board-row">
+                <div data-col="0" data-row="3" class="board-cell"></div>
+                <div data-col="1" data-row="3" class="board-cell"></div>
+                <div data-col="2" data-row="3" class="board-cell"></div>
+                <div data-col="3" data-row="3" class="board-cell"></div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <span id="button-restart">Restart Game</span>
+        </div>
+    </div>
+</body>
